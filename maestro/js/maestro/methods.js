@@ -386,10 +386,10 @@ function drawLevel(redrawMini = false, noDOM = false) {
 		// console.log('qeScore = '+qeScore);
 		conflictCount = level.conflictCount;
 		document.getElementById('NCtext').innerHTML = `Spatial Conficts: ${conflictCount}`;
-		if (conflictCount > 20) {
-			document.getElementById('NCtext').style.color = 'orange';
+		if (conflictCount > 5) {
+			document.getElementById('NCtext').style.color = 'tomato';
 		} else if (conflictCount > 0) {
-			document.getElementById('NCtext').style.color = 'limegreen';
+			document.getElementById('NCtext').style.color = 'orange';
 		} else {
 			document.getElementById('NCtext').style.color = 'lime';
 		}
@@ -1247,7 +1247,7 @@ function toggleEditTools() {
 	else styleString = 'none';
 	document.getElementById('outsideToolbarContainer').style.display = styleString;
 	document.getElementById('trackEditor').style.display = styleString;
-	document.getElementById('trackNameContainer').style.display = styleString;
+	// document.getElementById('trackNameContainer').style.display = styleString;
 	if (!isOn) changeToolTo(2);
 }
 
@@ -1573,6 +1573,10 @@ function hideTrk(id) {
  */
 function tutorialBtn() {
 	window.open(tutorialLink);
+}
+
+function creditsBtn() {
+	window.open(creditsLink);
 }
 
 /**
